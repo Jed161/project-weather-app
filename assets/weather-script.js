@@ -52,10 +52,12 @@ const fillWeatherBox = (json, cityName) => {
 
     const listItem = document.getElementById("previous-searches")
     console.log(listItem)
+   if (listItem) {
     listItem.remove()
+   }
 
 if (!previousList.innerHTML.includes(json.nearest_area[0].areaName[0].value)) {
-    previousList.innerHTML += `<a href="#">${cityName}</a>-${temperatureValue}`
+    previousList.innerHTML += `<a href="#">${cityName}</a> - ${temperatureValue}`
 }
 
     // let previous = document.createElement("ul")
